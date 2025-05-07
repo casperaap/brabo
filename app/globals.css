@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* fallback colors */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* make html/body fill the viewport */
+html, 
+body {
+  height: 100%;
+  margin: 0;
+}
+
+/* global typography */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--foreground);
+}
+
+/* full-screen bg image with cover */
+body {
+  /* if you want to use CSS variable fallback, you can keep var(--background) */
+  background-color: var(--background);
+
+  /* actual image */
+  background-image: url('/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  /* ensure it always fills */
+  min-height: 100vh;
+}
