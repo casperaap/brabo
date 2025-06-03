@@ -31,15 +31,5 @@ body {
   color: var(--foreground);
 
   /* fallback bg color */
-  background-color: var(--background);
-
   /* actual bg image */
-  background-image: url('/background.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;  /* Optional: makes bg stay in place on scroll */
-
-  min-height: 100vh;
-  min-width: 100vw; /* This helps with 100% background fill on mobile */
 }

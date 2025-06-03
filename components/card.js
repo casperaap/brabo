@@ -83,7 +83,7 @@ export default function CardForm() {
     <div className="flex justify-center p-4 w-full">
       <form
         onSubmit={handleSubmit}
-        className="card bg-[#070707E6] shadow-sm w-full max-w-sm"
+        className="card bg-[#25211DE6] shadow-sm w-full max-w-sm"
       style={{
         boxShadow: 'inset 50px 100px 50px rgba(0,0,0,0.4)'
        }}
