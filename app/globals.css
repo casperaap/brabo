@@ -4,8 +4,8 @@
 
 /* fallback colors */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #171717;
+  --foreground: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,26 +19,27 @@
 html, 
 body {
   height: 100%;
+  width: 100%;      /* Add this to make sure it covers horizontal space */
   margin: 0;
+  padding: 0;       /* Good practice to reset padding */
+  box-sizing: border-box;
 }
 
 /* global typography */
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--foreground);
-}
 
-/* full-screen bg image with cover */
-body {
-  /* if you want to use CSS variable fallback, you can keep var(--background) */
+  /* fallback bg color */
   background-color: var(--background);
 
-  /* actual image */
+  /* actual bg image */
   background-image: url('/background.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  background-attachment: fixed;  /* Optional: makes bg stay in place on scroll */
 
-  /* ensure it always fills */
   min-height: 100vh;
+  min-width: 100vw; /* This helps with 100% background fill on mobile */
 }

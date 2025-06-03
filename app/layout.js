@@ -20,22 +20,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`
-          ${geistSans.variable}
-          ${geistMono.variable}
-          antialiased
-          min-h-screen
-        `}
-        style={{
+      <body>
+        {/* Full-screen background image div */}
+        <div style={{
+          position: 'fixed',
+          top: 0, left: 0, width: '100vw', height: '100vh',
+          zIndex: -1,
           backgroundImage: "url('/background.jpg')",
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center center',
           backgroundSize: 'cover',
-        }}
-      >
+        }} />
+        {/* Your app */}
         {children}
       </body>
     </html>
   );
 }
+

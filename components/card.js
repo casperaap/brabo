@@ -83,7 +83,10 @@ export default function CardForm() {
     <div className="flex justify-center p-4 w-full">
       <form
         onSubmit={handleSubmit}
-        className="card bg-base-100 shadow-sm w-full max-w-sm"
+        className="card bg-[#070707E6] shadow-sm w-full max-w-sm"
+      style={{
+        boxShadow: 'inset 50px 100px 50px rgba(0,0,0,0.4)'
+       }}
       >
         {/* Image / Placeholder */}
         <figure className="w-full aspect-video overflow-hidden">
@@ -104,7 +107,7 @@ export default function CardForm() {
               />
               <label
                 htmlFor="imageUpload"
-                className="btn btn-primary normal-case cursor-pointer"
+                className="btn btn-primary bg-[#E30713] border-[#E30713] normal-case cursor-pointer"
               >
                 Upload photo
               </label>
@@ -120,14 +123,14 @@ export default function CardForm() {
           <input
             type="text"
             placeholder="Your Name (Optional)"
-            className="input input-bordered input-primary w-full"
+            className="input input-bordered input-primary w-full bg-[#190F0C] border-[#E30713] focus:outline-[#E30713]"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
 
           <textarea
             placeholder="Anything you'd like to share here"
-            className="textarea textarea-bordered textarea-primary w-full mt-2"
+              className="textarea textarea-bordered textarea-primary w-full mt-2 bg-[#190F0C] border-[#E30713] focus:outline-[#E30713]"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
@@ -135,7 +138,7 @@ export default function CardForm() {
           <div className="card-actions w-full flex-col gap-2">
             <button
               type="submit"
-              className="btn btn-primary w-full"
+              className="btn btn-primary w-full bg-[#E30713] border-[#E30713]"
               disabled={status === 'loading'}
             >
               {status === 'loading' ? 'Sending…' : 'Submit'}

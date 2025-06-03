@@ -1,5 +1,6 @@
 import Navbar from '@/components/header';
 import CardForm from '@/components/card';
+import InspirationPopup from '@/components/InspirationPopup';
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
   <h1 className="font-semibold text-2xl sm:text-3xl text-center">
     Be a part of&nbsp;
-    <span className="inline-block px-1 bg-primary text-white">
+    <span className="inline-block px-1 bg-[#E30713] text-white">
       Brabo&nbsp;Media
     </span>
   </h1>
@@ -18,6 +19,7 @@ export default function Home() {
   </p>
         <Navbar/>
         <CardForm/>
+        <InspirationPopup/>
       </main>
     </div>
   );
