@@ -14,13 +14,13 @@ export default function InspirationPopup() {
   return (
     <div className="flex flex-col items-center">
       <span className="text-base">
-        No inspiration?{" "}
+        Geen Inspiratie?{" "}
         <button
           onClick={handleClick}
           className="underline text-[#E30713] hover:text-primary/80 transition-colors focus:outline-none"
           style={{ textDecorationThickness: "2px" }}
         >
-          Click here
+          Click hier
         </button>
       </span>
       <AnimatePresence>
