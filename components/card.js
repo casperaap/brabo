@@ -109,10 +109,10 @@ export default function CardForm() {
                 htmlFor="imageUpload"
                 className="btn btn-primary bg-[#E30713] border-[#E30713] normal-case cursor-pointer"
               >
-                Upload photo
+                Upload foto
               </label>
               <span className="text-sm text-gray-500 pointer-events-none">
-                {fileName || 'No image chosen'}
+                {fileName || 'Kies afbeelding'}
               </span>
             </div>
           )}
@@ -122,14 +122,14 @@ export default function CardForm() {
         <div className="card-body items-center text-center">
           <input
             type="text"
-            placeholder="Your Name (Optional)"
+            placeholder="Je Naam (Optioneel)"
             className="input input-bordered input-primary w-full bg-[#190F0C] border-[#E30713] focus:outline-[#E30713]"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
 
           <textarea
-            placeholder="Anything you'd like to share here"
+            placeholder="Iets dat je wilt delen..."
               className="textarea textarea-bordered textarea-primary w-full mt-2 bg-[#190F0C] border-[#E30713] focus:outline-[#E30713]"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
@@ -141,7 +141,7 @@ export default function CardForm() {
               className="btn btn-primary w-full bg-[#E30713] border-[#E30713]"
               disabled={status === 'loading'}
             >
-              {status === 'loading' ? 'Sending…' : 'Submit'}
+              {status === 'Laden...' ? 'Versutren…' : 'Verstuur'}
             </button>
 
             {alertVisible && status === 'sent' && (
@@ -159,12 +159,12 @@ export default function CardForm() {
                     d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-                <span>Your submission has been sent!</span>
+                <span>Je bericht is ontvangen. Bedankt!</span>
               </div>
             )}
             {alertVisible && status === 'error' && (
               <div role="alert" className="alert alert-error w-full">
-                <span>Oops! Something went wrong.</span>
+                <span>Oops! Er ging iets mis.</span>
               </div>
             )}
           </div>
