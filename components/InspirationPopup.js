@@ -33,7 +33,7 @@ export default function InspirationPopup() {
             className="mt-4"
           >
             <div role="alert" className="alert alert-info shadow-lg bg-[#070707E6] border-[#E30713] text-[white]">
-              <span>Answer the Weekly Question!<br/><br/>What's one of your most excited Brabo moments? Images are bonus points!</span>
+              <span>Challennge van deze week!<br/><br/>Genereer een afbeelding met AI van jouw droom zwembad.</span>
             </div>
           </motion.div>
         )}
