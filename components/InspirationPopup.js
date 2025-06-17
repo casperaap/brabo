@@ -20,7 +20,7 @@ export default function InspirationPopup() {
           className="underline text-[#E30713] hover:text-primary/80 transition-colors focus:outline-none"
           style={{ textDecorationThickness: "2px" }}
         >
-          Click hier
+          klik hier
         </button>
       </span>
       <AnimatePresence>
